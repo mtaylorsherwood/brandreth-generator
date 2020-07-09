@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>The Brandreth Generator</title>
+    <meta name="description" content="The Gyles Brandreth Anecdote Generator" />
+    <meta name="author" content="Martyn Taylor-Sherwood" />
+
+    <link href="tailwind.min.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-gray-900">
+    <header class="text-gray-500 body-font">
+      <div
+        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+      >
+        <a
+          class="flex title-font font-medium items-center text-white mb-4 md:mb-0"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="w-10 h-10 text-white p-2 bg-orange-500 rounded-full"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M18.125,15.804l-4.038-4.037c0.675-1.079,1.012-2.308,1.01-3.534C15.089,4.62,12.199,1.75,8.584,1.75C4.815,1.75,1.982,4.726,2,8.286c0.021,3.577,2.908,6.549,6.578,6.549c1.241,0,2.417-0.347,3.44-0.985l4.032,4.026c0.167,0.166,0.43,0.166,0.596,0l1.479-1.478C18.292,16.234,18.292,15.968,18.125,15.804 M8.578,13.99c-3.198,0-5.716-2.593-5.733-5.71c-0.017-3.084,2.438-5.686,5.74-5.686c3.197,0,5.625,2.493,5.64,5.624C14.242,11.548,11.621,13.99,8.578,13.99 M16.349,16.981l-3.637-3.635c0.131-0.11,0.721-0.695,0.876-0.884l3.642,3.639L16.349,16.981z"
+            ></path>
+          </svg>
+          <span class="ml-3 text-xl">The Brandreth Generator</span>
+        </a>
+        <nav
+          class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+        ></nav>
+      </div>
+    </header>
+
+    <section class="text-gray-500 bg-gray-900 body-font">
+      <div
+        class="container mx-auto flex px-5 py-24 items-center justify-center flex-col"
+      >
+        <div class="text-center lg:w-2/3 w-full">
+          <h1
+            class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white"
+          >
+            It was during <span id="during"></span> when I
+            <span id="when"></span> with <span id="with"></span>
+          </h1>
+          <p class="leading-relaxed mb-8">
+            Get a Gyles Brandreth Anecdote to liven up any
+            <strike>party</strike> Zoom call.
+            <br />
+            Inspired by the QI Elves
+            <a
+              href="https://twitter.com/qikipedia/status/1281159729201455109"
+              target="_blank"
+              rel="noopener"
+            >
+              Create Your Own Gyles Brandreth Anecdote
+            </a>
+            and obviously Mr Brandreth himself.
+          </p>
+          <div class="flex justify-center">
+            <button
+              onclick="getAnecdote()"
+              class="inline-flex text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded text-lg"
+            >
+              Want Another?
+            </button>
+          </div>
+          <div class="flex justify-center">
+            <a
+              href="https://twitter.com/qikipedia/status/1281159729201455109"
+              target="_blank"
+              rel="noopener"
+            >
+              <button
+                class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
+              >
+                See the original tweet from the QI Elves
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-4 h-4 ml-1"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-gray-500 bg-gray-900 body-font">
+      <div
+        class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"
+      >
+        <a
+          class="flex title-font font-medium items-center md:justify-start justify-center text-white"
+        >
+          <span class="ml-3 text-xl">The Brandreth Generator</span>
+        </a>
+        <p
+          class="text-sm text-gray-600 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4"
+        >
+          © 2020 M Taylor-Sherwood —
+          <a
+            href="https://twitter.com/gingergibberish"
+            class="text-gray-500 ml-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@gingergibberish</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const during = [
+        "the 1996 Royal Variety performance",
+        "a recording of Have I Got News For You",
+        "the opening night of CATS",
+        "her Majesty's Golden Jubiliee",
+        "the 1997 Eurovision after party",
+        "a gala fundraiser for Save the Donkeys",
+        "the London 2012 Opening Ceremony",
+        "the opening of Kensington's Waitrose",
+        "the British Kebab Awards ceremony",
+        "the Conservative Party Conference",
+        "the Channel 5 launch party",
+        "the 1998 Wimbledon Ladies' Final",
+      ];
+
+      const when = [
+        "had a falling out over the Oxford comma",
+        "performed a 15 minute version of Macbeth",
+        "rode Sally, a two humped camel",
+        "gave a dramatic reading from 50 Shades of Grey",
+        "downed three Jagerbombs",
+        "sang ABBA's Dancing Queen",
+        "disgraced myself during a game of Twister",
+        "completed a fiendish Sudoku",
+        "shared a multipack of Monster Munch",
+        "did the ice bucket challenge",
+        "dressed up as Widow Twankey",
+        "rediscovered the joys of roller blading",
+        "played the best tiddlywinks of my career",
+        "had a quick round of Boggle",
+        "swapped spotted dick recipies",
+        "shared a quiche loraine",
+        "rode a tandem bicycle into a canal",
+        "was flirting outragously",
+        "played Beethoven's Fifth on the xylophone",
+        "re-enacted Torvill and Dean's Bolero",
+        "discovered a shared love of Curly Wurlys",
+        "learned the choreography to the Macarena",
+        "beat some local youths in a wheelbarrow race",
+        "almost lost an eye pulling a wishbone",
+        "modelled the latest collection by Versace",
+        "did something unrepeatable",
+      ];
+
+      const withWho = [
+        "not one but three of the loose women",
+        "a rather confused Yoko Ono",
+        "my Pointless friend Richard Osman",
+        "Jonathan Creek himself, Alan Davies",
+        "either Dick or Dom, it's hard to say for sure",
+        "none other than Prince Edward",
+        "confirmed thespian Dame Julie Walters",
+        "the fragrant Emma Thompson",
+        "the always fabulous Cilla Black",
+        "the radiant Moira Stewart",
+        "the original bachelor boy Sir Cliff Richard",
+        "that outrageous minx Dame Edna Everage",
+        "the always delightful Lenny Henry",
+        "my friend and yours Pop Francis",
+        "a trifle-laden Delia Smith",
+        "star or stage and screen Sir Ian McKellen",
+        "that tasty little Danish Sandi Toksvig",
+        "the incomparable Brian Blessed",
+        "housewives' favourite Jeremy Paxman",
+        "that sweet man Archbishop Desmond Tutu",
+        "my bosum buddy Dame Judi Dench",
+        "the Vicar of Dibly, Dawn French",
+        "pop kitten Geri Halliwell",
+        "the scintillating Nigella Lawson",
+        "the slightly tipsy Cherie Blair",
+        "that delightful young man Andi Peters",
+      ];
+
+      function getAnecdote() {
+        let duringPick = Math.round(Math.random() * (during.length - 1));
+        let whenPick = Math.round(Math.random() * (when.length - 1));
+        let withPick = Math.round(Math.random() * (withWho.length - 1));
+
+        document.getElementById("during").innerHTML = during[duringPick];
+        document.getElementById("when").innerHTML = when[whenPick];
+        document.getElementById("with").innerHTML = withWho[withPick];
+      }
+
+      getAnecdote();
+    </script>
+  </body>
+</html>
