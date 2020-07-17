@@ -1,6 +1,8 @@
 # The Brandreth Generator
 
-A silly little project inspired by a tweet from the QI elves. Will give you an anecdote, that could have come from Gyles Brandreth, for you to use at your next social event. 
+A silly little project inspired by a tweet from the QI elves. Will give you an anecdote, that could have come from Gyles Brandreth, for you to use at your next social event.
+
+[View the website](https://brandreth-generator.netlify.app/)
 
 ## Netlify Build Status
 
@@ -14,6 +16,7 @@ A silly little project inspired by a tweet from the QI elves. Will give you an a
   - Adding aria-label to the "Want Another?" button
   - Changing the button font colour to black to improve contrast
   - Inlining the CSS
+- Added link to site within README
 
 ### July 10th 2020
 
