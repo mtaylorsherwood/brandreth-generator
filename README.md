@@ -13,6 +13,7 @@ A silly little project inspired by a tweet from the QI elves. Will give you an a
 ### November 12th 2020
 
 - Corrected Twitter handle and link
+- Added `href` link to page header to help SEO
 
 ### July 17th 2020
 
