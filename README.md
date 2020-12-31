@@ -10,6 +10,10 @@ A silly little project inspired by a tweet from the QI elves. Will give you an a
 
 ## Changes
 
+### December 31st 2020
+
+- Added 2021 to the footer
+
 ### November 12th 2020
 
 - Corrected Twitter handle and link
