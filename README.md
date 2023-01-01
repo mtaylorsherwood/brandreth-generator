@@ -2,13 +2,15 @@
 
 A silly little project inspired by a tweet from the QI elves. Will give you an anecdote, that could have come from Gyles Brandreth, for you to use at your next social event.
 
-[View the website](https://brandreth-generator.netlify.app/)
-
-## Netlify Build Status
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ea6a08c2-efed-4843-961e-4ffc1b926e20/deploy-status)](https://app.netlify.com/sites/brandreth-generator/deploys)
+[View the website](https://mtaylorsherwood.github.io/brandreth-generator/)
 
 ## Changes
+
+### January 1st 2023
+
+- Moved from Netlify to GitHub pages
+- Add some analytics and goals to see if the site actually gets visited
+- Update copyright
 
 ### December 31st 2020
 
